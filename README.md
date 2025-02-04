@@ -102,9 +102,7 @@ Four files should be constructed.
 
 # File fsta
 
-==============
 Station information: the file is a binary file fsta with equal length of 28 octets.
-
 Utilities are provided a2fsta and fsta2a for performing conversion from ascii to binary and from
 binary to ascii.
 The first record has only one useful information: the number of stations nsta with six other
@@ -128,8 +126,7 @@ for tuned conversion of existing data file.
 
 # File fsrc
 
-%Source information: the file is a binary file fsrc with an equal length of 32 octets
-==============
+Source information: the file is a binary file fsrc with an equal length of 32 octets
 Utilities are provided a2fsrc and fsrc2a for performing conversion from ascii to binary and from
 binary to ascii.
 The first record has the following information: the number of sources nsrc, the number of
@@ -163,8 +160,7 @@ PROCEDURE.
 
 # File fobs
 
-%Time observation: the file is a binary file fobs with an equal length of 24 octets
-==============
+Time observation: the file is a binary file fobs with an equal length of 24 octets
 Utilities are provided a2fobs and fobs2a for performing conversion from ascii to binary
 (fobs.asc  fobs) and from binary to ascii (fobs  fobs.asc).
 The first record has the following information: the total number of picked times nt, the number
@@ -195,17 +191,14 @@ programs for conversion.
 # Definition of the velocity models
 
 %File modelP
-
 The P wave velocity structure, as well as the S wave velocity structure, is described in a binary
 file (direct-access file using the terminology of FORTRAN) with the following order of storage:
 x is the fastest, y the second and z the third. Only float values of the velocity are stored.
 
 %File modelS
-
 The S wave velocity is described as well following the same grid description.
 
 % File model.head
-
 Information regarding the velocity model is provided inside the file model.head: we have
 always one line of comments and then input values in the second line and so on.
 This rectangular grid is attached to a reference frame with an absolute origin (xinv,yinv,zinv)
