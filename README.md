@@ -64,7 +64,7 @@ Although seismic tomography is based on pretty images, no graphic tools are prov
 may rely on those you are familiar with. The graphical environment that is often used comes
 from CWP project through SEISMIC UNIX (SU) software as well as from GNU. We use
 essentially ximage for quick check-up of velocities and GNUPLOT for quick check-up of
-hypcenters. Other familiar tools is the GMT tool.
+hypcenters. Other familiar tool is the GMT tool.
 
 # The directory SRC_OCTOBER_2022 contains :
 
@@ -111,13 +111,13 @@ dummy 4-octets variables.
 The number of other records is, therefore, nsta, leading to a total of (nsta+1) records of 28
 octets.
 Each record following the first one describes a station with the following information
-(1) id_sta: integer(kind=4) a unique id for the station (different between stations)
-(2) x_sta: real(kind=4) the x position of the station in the reference frame
-(3) y_sta: real(kind=4) the y position of the station in the reference frame
-(4) z_sta: real(kind=4) the z position of the station in the reference frame
-(5) dtp_sta: real(kind=4) the static delay time for P waves at this station
-(6) dts_sta: real(kind=4) the static delay time for S waves at this station
-(7) name: character(len=4) the label of the station in four letters (quite common for geographical
+- (1) id_sta: integer(kind=4) a unique id for the station (different between stations)
+- (2) x_sta: real(kind=4) the x position of the station in the reference frame
+- (3) y_sta: real(kind=4) the y position of the station in the reference frame
+- (4) z_sta: real(kind=4) the z position of the station in the reference frame
+- (5) dtp_sta: real(kind=4) the static delay time for P waves at this station
+- (6) dts_sta: real(kind=4) the static delay time for S waves at this station
+- (7) name: character(len=4) the label of the station in four letters (quite common for geographical
 identification … not used in computer codes). Having four letters is mandatory (no empty
 space).
 The easiest way for constructing the fsta file is through a raw text file where each line describes
@@ -139,25 +139,24 @@ variables of 4 octets pad the end of the record.
 The number of other records is, therefore, nsrc, leading to a total of (nsrc+1) records of 32
 octets.
 Each record following the first one describes a source with the following information
-(1) x_src: real(kind=4) the x position of the source in the reference frame
-(2) y_src: real(kind=4) the y position of the source in the reference frame
-(3) z_src: real(kind=4) the z position of the source in the reference frame
-(4) t0_src: real(kind=4) the origin time of the source
-(5) kp_src: integer(kind=4) position flag for quakes (continuous increment for easier
+- (1) x_src: real(kind=4) the x position of the source in the reference frame
+- (2) y_src: real(kind=4) the y position of the source in the reference frame
+- (3) z_src: real(kind=4) the z position of the source in the reference frame
+- (4) t0_src: real(kind=4) the origin time of the source
+- (5) kp_src: integer(kind=4) position flag for quakes (continuous increment for easier
 debugging) (0 for others). If the flag is non-zero, we consider this event for position inversion.
-(6) kt_src: integer(kind=4) origin time flag for quakes and blasts (continuous increment for
+- (6) kt_src: integer(kind=4) origin time flag for quakes and blasts (continuous increment for
 easier debugging) (0 for others). If the flag is non-zero, we consider this event for origin time.
-(7) in_src: integer(kind=4) status of the source (in=1 means in the box, out=0 means out). Once
+- (7) in_src: integer(kind=4) status of the source (in=1 means in the box, out=0 means out). Once
 this number is set to zero, only specific editing manipulation will put back the event into the
 tomography optimization
-(8) id_src: integer(kind=4) unique id of the source (should be unique). Although this
+- (8) id_src: integer(kind=4) unique id of the source (should be unique). Although this
 identification number is arbitrary, keep it small will simplify the tracking during the
 tomography. An incremental strategy is advisable.
 The easiest way for constructing the fsrc file is through a raw text file where each line describes
 one record. By using the a2fsrc program, one can convert this text file into the binary file used
 for the tomography.
-BE AWARE THAT THIS FILE WILL BE MODIFIED THROUGH THE INVERSION
-PROCEDURE.
+BE AWARE THAT THIS FILE WILL BE MODIFIED THROUGH THE INVERSION PROCEDURE.
 
 # File fobs
 
@@ -171,12 +170,12 @@ The number of other records is, therefore, nt, leading to a total of (nt+1) reco
 Records up to ntp+1 are related to P wave times and records from ntp+2 to ntp+2+nts related
 to S wave times.
 Each record following the first one describes a data picked time with the following information
-(1) id_obs: integer(kind=4) a unique integer for defining this data point
-(2) t_obs: real(kind=4) arrival time of the picked wave (P or S)
-(3) dt_obs: real(kind=4) precision in the picking
-(4) id_src: integer(kind=4) id of the associated source
-(5) id_sta: integer(kind=4) id of the associated station
-(6) id_ray: integer(kind=4) id of the associated rayThe last information is built during the inversion and is not required as input: you could set it
+- (1) id_obs: integer(kind=4) a unique integer for defining this data point
+- (2) t_obs: real(kind=4) arrival time of the picked wave (P or S)
+- (3) dt_obs: real(kind=4) precision in the picking
+- (4) id_src: integer(kind=4) id of the associated source
+- (5) id_sta: integer(kind=4) id of the associated station
+- (6) id_ray: integer(kind=4) id of the associated rayThe last information is built during the inversion and is not required as input: you could set it
 to zero. This is a way of tracking ray information while scanning the data in a loop from 1 to nt
 (total number of observations).
 The easiest way for constructing the fobs file is through a raw text file where each line describes
