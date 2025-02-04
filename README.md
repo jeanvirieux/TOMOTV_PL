@@ -68,18 +68,18 @@ hypcenters. Other familiar tools is the GMT tool.
 # The directory SRC_OCTOBER_2022 contains :
 
 Makefile: the make file for compiling of the various executable programs
-Directory MODEL: where are source codes for reading the information on the velocity structure
-Directory RAYTRACING: where are source codes for doing two-points ray tracing
-Directory DERIVE: where are source codes for computing synthetic times and
+- Directory MODEL: where are source codes for reading the information on the velocity structure
+- Directory RAYTRACING: where are source codes for doing two-points ray tracing
+- Directory DERIVE: where are source codes for computing synthetic times and
 sensitivity matrix
-Directory PRECOND: where are source codes for weighting data and parameters as
+- Directory PRECOND: where are source codes for weighting data and parameters as
 well as smoothing techniques
-Directory INVERSE: where are source codes for the inversion and the updating of
+- Directory INVERSE: where are source codes for the inversion and the updating of
 parameters, velocity and hypocenter/blast parameters.
-Directory STATISTICS : where are source codes for doing statistics on stats, srcs and
+- Directory STATISTICS : where are source codes for doing statistics on stats, srcs and
 velocities
-Directory UTIL: where are various useful programs
-Directory THIRD_PARTY: where you will find different programs which may not be
+- Directory UTIL: where are various useful programs
+- Directory THIRD_PARTY: where you will find different programs which may not be
 distributed (see first lines of each program)
 
 # Compiling and executing
