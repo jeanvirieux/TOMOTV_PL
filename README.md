@@ -7,9 +7,9 @@ Winter 2015
 
 Contribution of Ortensia Amoroso, Stéphanie Gauthier, Jean-Luc Got, Jenny Jacques, Diana
 Latorre, Vadim Monteiller, Stéphane Operto, Céline Ravaut, Tiziana Vanorio,.
-CAUTION A: files are different from the previous TLR3 software (conversion program is
+- CAUTION A: files are different from the previous TLR3 software (conversion program is
 provided as it is for helping you transforming TLR3 input files into tomoTV files).
-CAUTION B: this software has not yet the double difference feature developed in the original
+- CAUTION B: this software has not yet the double difference feature developed in the original
 tomoTV code of Monteiller …
 
 # General purpose
@@ -34,13 +34,12 @@ approach we are going to describe has been used
 Le Meur, H., J. Virieux and P. Podvin, 1997, Seismic tomography of the Gulf of Corinth: a
 comparison of methods, Annali di Geofisica, XL, 1, pp1-25
 - Ghose,S., M.W. Hamburger & J. Virieux, 1998. Three-dimensional velocity structure and earthquake
-locations beneath the northern Tien Shan of Kyrgyzstan, central Asia, J. Geophys. Res., 103, 2725-
-2748.
+locations beneath the northern Tien Shan of Kyrgyzstan, central Asia, J. Geophys. Res., 103, 2725-2748.
 - Latorre, D., Virieux, J., Monfret, T., Monteiller, V., Vanorio, T., Got, J.-L. & H Lyon-Caen, 2004. A
 new seismic tomography of Aigion area (Gulf of Corinth, Greece) from the 1991 data set, Geophys. J.
-Int., 159, 1013-1031.- Monteiller V., Got J.-L., J. Virieux & P. Okubo, 2005, An efficient algorithm for double-difference
-tomography and location in heterogeneous media, with an application to Kilauea volcano, J. Geophys.
-Res., 110, B12306, doi:10.1029/2004JB003466.
+Int., 159, 1013-1031.- Monteiller V., Got J.-L., J. Virieux & P. Okubo, 2005, An efficient algorithm
+for double-difference tomography and location in heterogeneous media, with an application to Kilauea
+volcano, J. Geophys. Res., 110, B12306, doi:10.1029/2004JB003466.
 - Vanorio T., J. Virieux, P. Capuano & G. Russo, 2005, Three-dimensional seismic tomography from
 P wave and S wave microearthquake travel times and rock physics characterization of the Campi
 Flegrei Caldera, J. Geophys. Res., 110, B03201, doi:10.1029/2004JB003102.
@@ -103,7 +102,7 @@ Four files should be constructed.
 
 # File fsta
 
-Station information: the file is a binary file fsta with equal length of 28 octets.
+%Station information: the file is a binary file fsta with equal length of 28 octets.
 ==============
 Utilities are provided a2fsta and fsta2a for performing conversion from ascii to binary and from
 binary to ascii.
@@ -128,7 +127,7 @@ for tuned conversion of existing data file.
 
 # File fsrc
 
-Source information: the file is a binary file fsrc with an equal length of 32 octets
+%Source information: the file is a binary file fsrc with an equal length of 32 octets
 ==============
 Utilities are provided a2fsrc and fsrc2a for performing conversion from ascii to binary and from
 binary to ascii.
@@ -163,7 +162,7 @@ PROCEDURE.
 
 # File fobs
 
-Time observation: the file is a binary file fobs with an equal length of 24 octets
+%Time observation: the file is a binary file fobs with an equal length of 24 octets
 ==============
 Utilities are provided a2fobs and fobs2a for performing conversion from ascii to binary
 (fobs.asc  fobs) and from binary to ascii (fobs  fobs.asc).
@@ -192,19 +191,19 @@ Computer codes for the conversion of ascii files into binary files might be usef
 in another format. They are in the directory UTIL under the directory SRC where you will find
 programs for conversion.
 
-# Definition of the velocity model (MODEL)
+# Definition of the velocity models
 
-# File modelP
+%File modelP
 
 The P wave velocity structure, as well as the S wave velocity structure, is described in a binary
 file (direct-access file using the terminology of FORTRAN) with the following order of storage:
 x is the fastest, y the second and z the third. Only float values of the velocity are stored.
 
-# File modelS
+%File modelS
 
 The S wave velocity is described as well following the same grid description.
 
-# File model.head
+% File model.head
 
 Information regarding the velocity model is provided inside the file model.head: we have
 always one line of comments and then input values in the second line and so on.
@@ -227,35 +226,35 @@ used full grid strategy and, for potential use, the origin of the eikonal grid s
 from the inversion grid.
 The basic input could be seen through a shell file for running this velocity model transformation.
 ========================== FILE model.head
-# P velocity only (1) or P & S velocities (2)
+% P velocity only (1) or P & S velocities (2)
 1
-# origin of the grid
+% origin of the grid
 -1000.00000
 -375.000000
 -1000.00000
-# dimensions nx,ny,nz
+% dimensions nx,ny,nz
 65
 4
 25
 strategy for 2D application
-# samplings along x,y,z
+% samplings along x,y,z
 500.000000
 250.000000
 500.000000
-# forward problem sampling (cube)
+% forward problem sampling (cube)
 250.000000
-# ray sampling
+% ray sampling
 10.0000000
-# starting node
+% starting node
 1 1 1
-# ending node
+% ending node
 65 4 25
 ======================== END OF THE FILE
 
 There are files you need to proceed sequentially through different steps defined by isolated
 programs : they have files for communication between them.
 
-See more explanation in the documentation inside the directory DOC_TOMOTV
+# See more explanation in the file USER_MANUAL_2015.pdf inside the directory DOC_TOMOTV
 
 # Conclusion
 
