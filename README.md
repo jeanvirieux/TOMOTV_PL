@@ -102,8 +102,9 @@ Four files should be constructed.
 
 # File fsta
 
-Station information: the file is a binary file fsta with equal length of 28 octets.
 ==============
+Station information: the file is a binary file fsta with equal length of 28 octets.
+
 Utilities are provided a2fsta and fsta2a for performing conversion from ascii to binary and from
 binary to ascii.
 The first record has only one useful information: the number of stations nsta with six other
