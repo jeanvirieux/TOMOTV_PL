@@ -6,7 +6,7 @@ First Arrival Delayed Time Tomography
 - Winter 2015
 
 Contribution of Ortensia Amoroso, Stéphanie Gauthier, Jean-Luc Got, Jenny Jacques, Diana
-Latorre, Vadim Monteiller, Stéphane Operto, Céline Ravaut, Tiziana Vanorio and many others.
+Latorre, Vadim Monteiller, Stéphane Operto, Céline Ravaut, Tiziana Vanorio, Aldo Zollo and many others.
 
 - CAUTION A: files are different from the previous TLR3 software (conversion program is
 provided as it is for helping you transforming TLR3 input files into tomoTV files).
