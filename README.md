@@ -220,37 +220,38 @@ used full grid strategy and, for potential use, the origin of the eikonal grid s
 from the inversion grid.
 The basic input could be seen through a shell file for running this velocity model transformation.
 
-%FILE model.head
--% P velocity only (1) or P & S velocities (2)
--1
--% origin of the grid
---1000.00000
---375.000000
---1000.00000
--% dimensions nx,ny,nz
--65
--4
--25
--strategy for 2D application
--% samplings along x,y,z
--500.000000
--250.000000
--500.000000
--% forward problem sampling (cube)
--250.000000
--% ray sampling
--10.0000000
--% starting node
--1 1 1
--% ending node
--65 4 25
+#FILE model.head
+% P velocity only (1) or P & S velocities (2)
+1
+% origin of the grid
+-1000.00000
+-375.000000
+-1000.00000
+% dimensions nx,ny,nz
+65
+4
+25
+strategy for 2D application
+% samplings along x,y,z
+500.000000
+250.000000
+500.000000
+% forward problem sampling (cube)
+250.000000
+% ray sampling
+10.0000000
+% starting node
+1 1 1
+% ending node
+65 4 25
 END OF THE FILE
 
 There are files you need to proceed sequentially through different steps defined by isolated
 programs : they have files for communication between them.
 
-Complete information: look at the file
-#USER_MANUAL_2015.pdf (dir DOC_TOMOTV)
+Complete information: inside DOC_TOMOTV, look at the file
+
+# USER_MANUAL_2015.pdf
 
 # Conclusion
 
