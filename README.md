@@ -221,9 +221,9 @@ from the inversion grid.
 The basic input could be seen through a shell file for running this velocity model transformation.
 
 # example of file model.head
-% P velocity only (1) or P & S velocities (2)
-1
-% origin of the grid
+(1) % P velocity only (1) or P & S velocities (2)
+(2) 1
+(3) % origin of the grid
 -1000.00000
 -375.000000
 -1000.00000
