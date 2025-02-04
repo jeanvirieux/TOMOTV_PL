@@ -1,0 +1,78 @@
+#!/bin/bash
+#OAR -l nodes=1/core=16,walltime=0:10:00
+#OAR --project pr-resolve 
+###OAR -p "network_address='luke3'"
+#OAR -p team='ondes'
+
+
+#######################
+# soumission par oarsub -S ./ls_essai.oar
+# fichier ls_essai.oar doit etre executable
+########################
+
+#environment load
+. /applis/ciment/v2/env.bash
+
+module load intel-devel
+ulimit -s unlimited
+
+
+cd $OAR_WORKDIR
+
+pwd
+
+cat $OAR_NODE_FILE
+
+export OMP_NUM_THREADS=1
+
+cd /summer/resolve/Argentiere/JEAN/CROSS_QUAKES_SMALL/RUN_CYLINDER_COARSE_cross_quakes_10
+
+# ############################### REFERENCE MODEL
+#  NUMBER OF ITERATIONS MAXIMAL
+MAX=1
+I=1
+
+# ###############################
+#  COPY DATA
+/bin/cp DATA/modelP.syn modelP
+
+/bin/cp DATA/fshots fsrc
+/bin/cp DATA/fsta fsta
+/bin/cp DATA/fobs fobs
+/bin/cp DATA/fwei fwei	
+
+/bin/cp DATA/model.head model.head
+/bin/cp DATA/inversion.head inversion.head
+/bin/cp DATA/cylinder.head .
+
+echo " starting the synthetic computation "
+
+
+while [ $I -le $MAX ]
+do
+echo "---------------------------------------------------------"
+echo "INTERPOLATED MODEL  SYNTHETIC     ITERATION NUMBER"": "${I}
+echo " "
+../../BIN_LINUX/model.tomo
+
+
+echo "---------------------------------------------------------"
+echo "RAY TRACING         SYNTHETIC     ITERATION NUMBER"": "${I}
+echo " "
+../../BIN_LINUX/raytrace.tomo_OMP
+
+echo "---------------------------------------------------------"
+echo "DERIVATE           SYNTHETIC      ITERATION NUMBER"": "${I}
+echo " "
+../../BIN_LINUX/derive.tomo_HFM
+
+mv fcal DATA/fobs
+
+I=$((I+1))
+done
+
+echo '**************************'
+echo end of synthetic new data in DATA/fobs
+echo '**************************'
+
+# ######################## END LOOP

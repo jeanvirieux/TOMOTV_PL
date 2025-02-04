@@ -1,0 +1,12 @@
+diff  aprod.f90 ../../../TOMOTV_HFM_PL/SRC_OCTOBER_2022/INVERSE_TV/aprod.f90
+diff  inverse.tomo.f90 ../../../TOMOTV_HFM_PL/SRC_OCTOBER_2022/INVERSE_TV/inverse.tomo.f90
+diff  lsqrblas.f90 ../../../TOMOTV_HFM_PL/SRC_OCTOBER_2022/INVERSE_TV/lsqrblas.f90
+diff  lsqr.f90 ../../../TOMOTV_HFM_PL/SRC_OCTOBER_2022/INVERSE_TV/lsqr.f90
+diff  new_parameters_denoising2D.f90 ../../../TOMOTV_HFM_PL/SRC_OCTOBER_2022/INVERSE_TV/new_parameters_denoising2D.f90
+diff  new_parameters.f90 ../../../TOMOTV_HFM_PL/SRC_OCTOBER_2022/INVERSE_TV/new_parameters.f90
+diff  new_parameters_old.f90 ../../../TOMOTV_HFM_PL/SRC_OCTOBER_2022/INVERSE_TV/new_parameters_old.f90
+diff  new_parameters_smoothing_only_old.f90 ../../../TOMOTV_HFM_PL/SRC_OCTOBER_2022/INVERSE_TV/new_parameters_smoothing_only_old.f90
+diff  read_matrix.f90 ../../../TOMOTV_HFM_PL/SRC_OCTOBER_2022/INVERSE_TV/read_matrix.f90
+diff  sub_nesterov_3D.f90 ../../../TOMOTV_HFM_PL/SRC_OCTOBER_2022/INVERSE_TV/sub_nesterov_3D.f90
+diff  sub_read.f90 ../../../TOMOTV_HFM_PL/SRC_OCTOBER_2022/INVERSE_TV/sub_read.f90
+diff  sub_smoothing.f90 ../../../TOMOTV_HFM_PL/SRC_OCTOBER_2022/INVERSE_TV/sub_smoothing.f90
