@@ -1,17 +1,18 @@
 # TOMOTV_PL
 First Arrival Delayed Time Tomography
-tomoTV
-By Jean Virieux
-Version 0.00
-Winter 2015
+# tomoTV_PL (for Tarantola and Valette as well as Podvin and Lecomte)
+- By Jean Virieux
+- Version 0.00
+- Winter 2015
 
 Contribution of Ortensia Amoroso, Stéphanie Gauthier, Jean-Luc Got, Jenny Jacques, Diana
-Latorre, Vadim Monteiller, Stéphane Operto, Céline Ravaut, Tiziana Vanorio,.
+Latorre, Vadim Monteiller, Stéphane Operto, Céline Ravaut, Tiziana Vanorio and many others.
+
 - CAUTION A: files are different from the previous TLR3 software (conversion program is
 provided as it is for helping you transforming TLR3 input files into tomoTV files).
 - CAUTION B: this software has not yet the double difference feature developed in the original
 tomoTV code of Monteiller …
-- CAUTION C: quantities are following units of System International (be aware)
+- CAUTION C: quantities are following units of System International (be aware!)
 
 # General purpose
 
