@@ -220,7 +220,7 @@ used full grid strategy and, for potential use, the origin of the eikonal grid s
 from the inversion grid.
 The basic input could be seen through a shell file for running this velocity model transformation.
 
-#FILE model.head
+# example of file model.head
 % P velocity only (1) or P & S velocities (2)
 1
 % origin of the grid
