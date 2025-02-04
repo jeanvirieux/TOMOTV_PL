@@ -219,7 +219,8 @@ we consider a smaller box inside the tomographic box for the inversion. Uptonow,
 used full grid strategy and, for potential use, the origin of the eikonal grid should be different
 from the inversion grid.
 The basic input could be seen through a shell file for running this velocity model transformation.
-========================== FILE model.head
+
+%FILE model.head
 % P velocity only (1) or P & S velocities (2)
 1
 % origin of the grid
@@ -243,12 +244,12 @@ strategy for 2D application
 1 1 1
 % ending node
 65 4 25
-======================== END OF THE FILE
+END OF THE FILE
 
 There are files you need to proceed sequentially through different steps defined by isolated
 programs : they have files for communication between them.
 
-# See more explanation in the file USER_MANUAL_2015.pdf inside the directory DOC_TOMOTV
+# Complete information: look at the file USER_MANUAL_2015.pdf (dir DOC_TOMOTV)
 
 # Conclusion
 
